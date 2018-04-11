@@ -11,7 +11,7 @@ maximum = None
 minimum = None
 
 while True : 
-    userEntered = input("Please enter a integer: ")
+    userEntered = input("Enter a number: ")
     # testMax = userEntered
     # testMin = userEntered
     
@@ -23,6 +23,7 @@ while True :
         elif minimum is None or float(userEntered) < minimum : 
             minimum = float(userEntered)
     except:
-        print("invalid input")
-print('Largest:', int(maximum), ' Smallest: ', int(minimum))
+        print("Invalid input")
+print('Maximum is', int(maximum))
+print('Minimum is', int(minimum))
     
