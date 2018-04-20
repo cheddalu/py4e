@@ -1,0 +1,48 @@
+Files
+
+Talking to text files which are thought of as a sequence of lines.
+
+Reading things that are permanent and writing back. 
+
+Read a file we call the open() function. 
+Makes it possible that you can read the file doesn't actually do the reading of the file. 
+
+filehandle = open(filename, mode)
+	modes: open, read, write, close
+
+fhand = open('mbox.txt')
+print(fhand)
+
+NEWLINE CHARACTER
+\n indicates that a new line is created.
+
+print() always puts a new line in. 
+
+\n counts as a character
+	stuff = 'X\nY'
+	print(stuff)
+		X
+		Y
+	len(stuff)
+		3
+
+FILE HANDLE AS A SEQUENCE
+
+fhand = open('mbox.txt')
+for cheese in xfile:
+	print(cheese)
+	
+COUNTING LINES IN A FILE
+fhand = open('mbox.txt')
+count = 0 
+for cheese in xfile:
+count = count + 1
+	print('Line Count:', count)
+
+#if saved in a file called open.py we can run: 
+	python3 open.py
+
+and will return: 
+	Line Count: 132045
+	
+#left off on https://youtu.be/0t4rvnySKR4?t=2m43s
