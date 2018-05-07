@@ -28,4 +28,7 @@ for lines in fhand:
             masterFile[word] = 1
         else: #this makes a histogram and adds 1 if the word is in the dictionary already.
             masterFile[word] = masterFile[word] + 1
+        #or remove the if else statement above, and use this:
+        #masterFile[word] = masterFile.get(word,0) + 1
+        
 print(masterFile)
