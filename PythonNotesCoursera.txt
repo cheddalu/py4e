@@ -1,0 +1,204 @@
+WEEK 2 
+Installing Python - [Video]
+
+None of the videos or assignments are required in this week.
+
+You don't need to have a computer where you can install Python. 
+The python playground is where you can go to run your code in a browser. 
+
+You can also use the "Python Playground" to experiment with writing your own Python applications using only your browser.
+
+But it is recommended to ultimately install a environment because as the course progresses it will come in handy to run off your local machine. 
+
+
+How I installed python3
+
+1. installed brew via the command: 
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+2. Installed python3
+	brew install python3
+
+Check version: 
+	$ python3 --version
+			Python 3.6.4
+
+	$ python3 hello.py
+			hello there!
+
+
+##QUESTION/POLL TO ASK THE GROUP:## 
+	Anyone have questions or issues with installing python on their system?
+
+
+[NOTES ON CHOISE OF TEXT EDITOR]
+Recommend atom text editor. because it works the same on all the platforms. 
+
+But can use any editor of your choosing: textwranger, notepad++ 
+
+
+##QUESTION/POLL TO ASK THE GROUP:## 
+	What does everyone else here use as an editor here and why? Is there a better editor to use that works well with python?
+
+[DEMO: USING USING PYTHON PLAYGROUND - VIDEO]
+	print('playground')
+
+Better to run code on your computer and develop there, have a better experience doing it there, and paste it in the playground when you want to submit it for grading. 
+
+Ask for help in Forums, type in username:email and student teachers can look at your code and make suggestions. 
+
+He prefers for us to build skills running the code on your laptops, but if not possible then thats why the Python Playground is for. 
+
+USING PYTHON - MAC [VIDEO]
+	Comes with python 2.7 already installed
+	
+	DL python3 and install from python website and install.
+	From terminal run 
+		python3 --version 
+	
+	Run atom editor 
+	
+	print('Hello world')
+	once saved as .py it will perform syntax highlighting. 
+	
+##TAKING SCREEN SHOTS## 
+	Can do it with the key commands: shift command 3 or 4. 
+		3 to perform a whole screen capture
+		4 allows you to select the area you you wish to capture 
+	
+
+WEEK 3
+Chapter one: Why We Program (continued)
+
+Understanding Programming (FROM CHAPTER 1 OF BOOK)
+In a sense, you need two skills to be a programmer:
+
+First, you need to know the programming language (Python) - you need to know the vocabulary and the grammar. You need to be able to spell the words in this new language properly and know how to construct well-formed "sentences" in this new language.
+
+Second, you need to "tell a story". In writing a story, you combine words and sentences to convey an idea to the reader. There is a skill and art in constructing the story, and skill in story writing is improved by doing some writing and getting some feedback. In programming, our program is the "story" and the problem you are trying to solve is the "idea".
+
+The reserved words in the language where humans talk to Python include the following:
+
+and       del       global      not       with
+as        elif      if          or        yield
+assert    else      import      pass
+break     except    in          raise
+class     finally   is          return
+continue  for       lambda      try
+def       from      nonlocal    while    
+
+
+TERMINOLOGY: INTERPRETER AND COMPILER
+Python is a high-level language intended to be relatively straightforward for humans to read and write and for computers to read and process. Other high-level languages include Java, C++, PHP, Ruby, Basic, Perl, JavaScript, and many more. The actual hardware inside the Central Processing Unit (CPU) does not understand any of these high-level languages.
+
+The CPU understands a language we call machine language. Machine language is very simple and frankly very tiresome to write because it is represented all in zeros and ones. 
+
+The Python interpreter is written in a high-level language called "C". You can look at the actual source code for the Python interpreter by going to www.python.org and working your way to their source code. So Python is a program itself and it is compiled into machine code. 
+
+ERRORS: 
+As your programs become increasingly sophisticated, you will encounter three general types of errors:
+
+Syntax errors
+	These are the first errors you will make and the easiest to fix. A syntax error means that you have violated the "grammar" rules of Python. Python does its best to point right at the line and character where it noticed it was confused. The only tricky bit of syntax errors is that sometimes the mistake that needs fixing is actually earlier in the program than where Python noticed it was confused. So the line and character that Python indicates in a syntax error may just be a starting point for your investigation.
+Logic errors
+	A logic error is when your program has good syntax but there is a mistake in the order of the statements or perhaps a mistake in how the statements relate to one another. A good example of a logic error might be, "take a drink from your water bottle, put it in your backpack, walk to the library, and then put the top back on the bottle."
+Semantic errors
+	A semantic error is when your description of the steps to take is syntactically perfect and in the right order, but there is simply a mistake in the program. The program is perfectly correct but it does not do what you intended for it to do. A simple example would be if you were giving a person directions to a restaurant and said, "...when you reach the intersection with the gas station, turn left and go one mile and the restaurant is a red building on your left." Your friend is very late and calls you to tell you that they are on a farm and walking around behind a barn, with no sign of a restaurant. Then you say "did you turn left or right at the gas station?" and they say, "I followed your directions perfectly, I have them written down, it says turn left and go one mile at the gas station." Then you say, "I am very sorry, because while my instructions were syntactically correct, they sadly contained a small but undetected semantic error.".
+
+	
+----------------------------------------------------------------------------------------------------
+
+2/21/18
+
+[READING CHAPTER 2: VARIABLES, NOTES]
+VARIABLES, EXPRESSIONS, AND STATEMENTS
+
+type() - will tell you what type of value you are dealing with.
+	{int, str, float}
+
+
+Well, that's not what we expected at all! Python interprets 1,000,000 as a comma-separated sequence of integers, which it prints with spaces between.
+
+This is the first example we have seen of a semantic error: the code runs without producing an error message, but it doesn't do the "right" thing.
+
+VARIABLES
+	A variable is a name that refers to a value.
+	Variables names are case sensitive, so LaTeX is not the same as latex.
+
+	
+Assignment statement creates new variables and gives them variables. A statement that assigns a value to a variable.
+
+		>>> message = 'And now for something completely different'
+		>>> n = 17
+		>>> pi = 3.1415926535897931
+
+VARIABLE NAMES AND KEYWORDS
+	When naming variables you should choose names that are meaningful and document what the variable is used for. 
+	Can contain letters and numbers, but can not start with a number. Recommended to start names with a lowercase letter. 
+
+PYTHON'S 33 RESERVED KEYWORDS
+and       del       from      None      True
+as        elif      global    nonlocal  try
+assert    else      if        not       while
+break     except    import    or        with
+class     False     in        pass      yield
+continue  finally   is        raise
+def       for       lambda    return
+
+STATEMENTS
+A statement is a unit of code that the Python interpreter can execute. 
+
+OPERATORS AND OPERANDS
+Operators are special symbols that represent computations like addition and multiplication. The values the operator is applied to are called operands.
+
+The operators +, -, *, /, and ** perform addition, subtraction, multiplication, division, and exponentiation.
+
+EXPRESSIONS
+An expression is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable.
+
+ORDER OF OPERATIONS
+	PEMDAS
+	Parentheses
+	Exponentiation
+	Multiplication and Division 
+	Addition and Subtraction
+	Note: Operators with the same precedence are evaluated from left to right. So the expression 5-3-1 is 1, not 3, because the 5-3 happens first and then 1 is subtracted from 2.
+	
+	When in doubt, always put parentheses in your expressions to make sure the computations are performed in the order you intend.
+
+MODULUS OPERATOR
+	The modulus operator works on integers and yields the remainder when the first operand is divided by the second. 
+	
+		>>> quotient = 7 // 3
+		>>> print(quotient)
+		2
+		>>> remainder = 7 % 3
+		>>> print(remainder)
+		1
+		
+		So 7 divided by 3 is 2 with 1 left over.
+
+		The modulus operator turns out to be surprisingly useful. For example, you can check whether one number is divisible by another: if x % y is zero, then x is divisible by y.
+		
+		You can also extract the right-most digit or digits from a number. For example, x % 10 yields the right-most digit of x (in base 10). Similarly, x % 100 yields the last two digits.
+
+STRING OPERATIONS
+	The + operator works with strings, but it is not addition in the mathematical sense. Instead it performs concatenation, which means joining the strings by linking them end to end.
+	
+		>>> first = 10
+		>>> second = 15
+		>>> print(first+second)
+		25
+		>>> first = '100'
+		>>> second = '150'
+		>>> print(first + second)
+		100150
+
+ASKING THE USER FOR INPUT
+input()
+
+
+CHOOSING MNEMONIC VARIABLE NAMES
+he word mnemonic2 means "memory aid". We choose mnemonic variable names to help us remember why we created the variable in the first place.
+
+DEBUGGING

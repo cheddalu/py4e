@@ -1,0 +1,93 @@
+Chapter 3: Conditionals
+
+Conditional execution
+BOOLEAN EXPRESSIONS - expression that is either True or False.
+	the operator: ==
+	
+		>>> 5 == 5
+		True
+		>>> 5 == 6
+		False	
+
+True and False are special values that belong to the class bool, not strings.
+		>>> type(True)
+		<class 'bool'>
+		>>> type(False)
+		<class 'bool'>
+
+The == operator is one of the comparison operators. 
+      x != y               # x is not equal to y
+      x > y                # x is greater than y
+      x < y                # x is less than y
+      x >= y               # x is greater than or equal to y
+      x <= y               # x is less than or equal to y
+      x is y               # x is the same as y
+      x is not y           # x is not the same as y
+
+NOTE: no such thing as =< or =>
+
+LOGICAL OPERATORS - and, or, and not. 
+
+	x > 0 and x < 10	#is true only if x is greater than 0 and less than 10.
+	
+	n%2 == 0 or n%3 == 0 	#is true if either of the conditions is true. If n is divisible by 2 or 3.
+	
+	not (x > y) 	#is true if x > y is false; that is, if x is less than or equal to y.
+	
+	Any nonzero number is interpreted as "true."
+			>>> 17 and True
+			True
+			
+CONDITIONAL EXECUTION
+	The boolean expression after the if statement is called the condition. 
+	We end the if statement with a colon character (:) 
+	The line(s) after the if statement are indented.
+
+	example if statement:
+			if x > 0 :
+			    print('x is positive')
+
+	If Logic:
+		If the logical condition is true, then the indented statement gets executed. If the logical condition is false, the indented statement is skipped.
+	
+		- The statement consists of a header line that ends with the colon character (:) followed by an indented block. 
+		- Statements like this are called compound statements because they stretch across more than one line.
+
+PASS STATEMENT: 
+	It is useful to have a body with no statements (usually as a place holder for code you haven't written yet). You can use the pass statement, which does nothing.
+
+			if x < 0 :
+			    pass          # need to handle negative values!
+
+If you enter an if statement in the Python interpreter, the prompt will change from three chevrons to three dots to indicate you are in the middle of a block of statements
+
+			>>> x = 3
+			>>> if x < 10:
+			...    print('Small')
+			...
+			Small
+			>>>
+
+ALTERNATIVE EXECUTION - 2 possibilities and the condition determines which one gets executed.
+			if x%2 == 0 :
+			    print('x is even')
+			else :
+			    print('x is odd')
+
+If the remainder when x is divided by 2 is 0, then we know that x is even, and the program displays "even". If the condition is false, the second set of statements is executed.
+
+If-Then-Else Logic: 
+Since the condition must either be true or false, exactly one of the alternatives will be executed. The alternatives are called branches, because they are branches in the flow of execution.
+
+CHAINED CONDITIONALS - Sometimes there are more than two possibilities and we need more than two branches. Accomplished by using chained conditionals.
+			if x < y:
+			    print('x is less than y')
+			elif x > y:
+			    print('x is greater than y')
+			else:
+			    print('x and y are equal')
+			    
+MULTI-LINE COMMAND: you can include the whole block in a set of triple quotation marks
+		"""Sipping from your cup 'til it runneth over,
+		Holy Grail.
+		"""
