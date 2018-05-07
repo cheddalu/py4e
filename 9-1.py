@@ -26,4 +26,6 @@ for lines in fhand:
         #print(word)
         if word not in masterFile: 
             masterFile[word] = 1
+        else: #this makes a histogram and adds 1 if the word is in the dictionary already.
+            masterFile[word] = masterFile[word] + 1
 print(masterFile)
