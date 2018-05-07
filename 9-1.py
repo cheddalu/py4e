@@ -1,3 +1,6 @@
+
+##DONE
+
 """Write a program that reads the words in words.txt and stores 
 them as keys in a dictionary. It doesn't matter what the values 
 are. Then you can use the in operator as a fast way to check 
@@ -15,11 +18,11 @@ except:
 
 for lines in fhand: 
     #print(lines)
-    #strip out the spaces and new line in the file
-    line = lines.strip()
+    #strip out the spaces and new line in the file this is optional
+    #line = lines.strip()
     #print(line)
     #split up the words in a list
-    words = line.split()
+    words = lines.split()
     #print(words)
     #grab each word to perform the check
     for word in words:
